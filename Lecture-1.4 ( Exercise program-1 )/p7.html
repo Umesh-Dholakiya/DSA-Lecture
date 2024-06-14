@@ -1,0 +1,29 @@
+
+<script type="text/javascript">
+
+    // Q7 - create 2d array row wise sum
+    //  Row sums: [24, 6, 15]
+
+
+    let arr = [
+        [7, 8, 9],
+        [1, 2, 3],
+        [4, 5, 6],
+    ];
+
+    let rowSum = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let row = arr[i];
+        let sum = 0;
+
+        for (let j = 0; j < row.length; j++) {
+            sum += row[j];
+        }
+
+        rowSum.push(sum);
+    }
+
+    console.log('Row sums:', rowSum);
+
+</script>

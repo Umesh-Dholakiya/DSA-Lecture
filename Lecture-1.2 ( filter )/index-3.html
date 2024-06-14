@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function InsertData(arr, element) {
+            arr.push(element); 
+            console.log("Element inserted: " + element);
+            console.log("Updated Array: " + arr);
+        }
+
+        // function checkElement(arr, element) {
+        //     let check = null;
+
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (arr[i] == element) {
+        //             check = arr[i];
+        //             break;
+        //         }
+        //     }
+
+        //     if (check) {
+        //         console.log("Element found");
+        //     } else {
+        //         alert("Element Not Found");
+        //     }
+        // }
+
+        let arr = [10, 20, 30, 41, 50];
+        // insert data 
+        InsertData(arr, 60); 
+        InsertData(arr, 70);
+
+        
+        // checkElement(arr, 20); 
+        // checkElement(arr, 10);
+        </script>
+
+</body>
+
+</html>

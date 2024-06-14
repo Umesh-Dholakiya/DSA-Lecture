@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function CheckElement(arr, element) {
+            let check = null;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == element) {
+                    check = arr[i];
+                    break;
+                }
+            }
+
+            if (check) {
+                console.log("Element found");
+            } else {
+                alert("Element Not Found");
+            }
+        }
+
+        let arr = [10, 20, 30, 41, 50];
+        CheckElement(arr, 20); 
+    </script>
+    
+</body>
+
+</html>

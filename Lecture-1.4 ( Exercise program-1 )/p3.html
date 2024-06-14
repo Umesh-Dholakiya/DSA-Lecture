@@ -1,0 +1,23 @@
+<script type="text/javascript">
+
+    // find to second largest element in array.
+    // ans :-  10
+
+    let arr = [3, 12, 10, 8, 7];
+    let max = arr[0];
+    let max1 = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max1 = max;
+            max = arr[i];
+        } else if (arr[i] > max1 && arr[i] !== max) {
+            max1 = arr[i];
+        }
+    }
+
+    console.log("the second largest number : " , max1);
+
+
+
+</script>

@@ -1,0 +1,25 @@
+<script type="text/javascript"> 
+
+    // Q8 - create 2d array column wise sum
+    // Colsum : [ 12 , 15 , 18]
+
+    let arr = [
+        [7, 8, 9],
+        [1, 2, 3],
+        [4, 5, 6],
+    ];
+
+    let colSums = [];
+
+    for (let j = 0; j < arr.length; j++)  {
+        let sum = 0;
+        for (let i = 0; i < arr[0].length; i++){
+            sum += arr[i][j];
+        }
+        colSums.push(sum);
+    }
+
+    console.log(colSums);
+
+
+</script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // Q1. to show only 1,2,3,7,8,9 And remove the 4 ,5, 6
+
+        let arr = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let Array = []
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (i % 2 == 0) {
+                    Array.push(arr[i][j])
+                }
+            }
+        }
+        console.log(Array);
+
+    </script>
+    <script>
+
+        // Q2. to show only 1,3,4,6,7,9 And remove the 2 , 5 , 8
+        let arr1 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let Array1 = []
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (j % 2 == 0) {
+                    Array1.push(arr[i][j])
+                }
+            }
+        }
+        console.log(Array1);
+
+
+    </script>
+    <script>
+
+        // Q3. to show only 1,2,3,5,7,8,9 And remove the 4 , 6
+        let arr2 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let Array2 = []
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (i % 2 == 0 || i == j) {
+                    Array2.push(arr[i][j])
+                }
+            }
+        }
+        console.log(Array2);
+    </script>
+
+    <script>
+
+        // Q4. to show only 3,2,1,5,9,8,7 And remove the 4 ,6
+        let arr3 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let Array3 = []
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = arr.length - 1; j >= 0; j--) {
+                if (i % 2 == 0 || i == j) {
+                    Array3.push(arr[i][j])
+                }
+            }
+        }
+        console.log(Array3);
+
+    </script>
+    <script>
+
+        // Q5. to shoe only 1,3,4,5,6,7,9 And remove the 2 , 8
+        let arr4 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let Array4 = []
+        for (let j = 0; j < arr.length; j++) {
+            for (let i = 0; i < arr.length; i++) {
+                if (j % 2 == 0 || i == j) {
+                    Array4.push(arr[i][j])
+                }
+            }
+        }
+        console.log(Array4);
+
+    </script>
+
+    <script>
+
+        // Q6. to shoe only 1,2,3,4,5,8,9,12,13,14,15,16 and remove the 6,7,10,11  
+
+        const array1 = [
+            [1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10],
+            [11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20]
+        ];
+
+        let answer = [];
+
+        for (let i = 0; i < array1.length; i++) {
+            for (let j = 0; j < array1[i].length; j++) {
+                if (i == 0 || j == 0 || j == array1[i].length - 1 || i == array1.length - 1) {
+                    answer.push(array1[i][j]);
+
+                }
+            }
+        }
+
+        console.log(answer);
+    </script>
+
+</body>
+
+</html>
