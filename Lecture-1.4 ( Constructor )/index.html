@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+
+class node {
+
+    constructor(value){
+
+        this.data = value;
+        this.next = null;
+    }
+
+    printData(){
+
+        let CurrentData = this ;
+
+        while(CurrentData){
+            console.log(CurrentData.data);
+            CurrentData = CurrentData.next ;
+        }
+    }
+}
+
+
+let head = new node(11);
+let second = new node(12);
+let third = new node(13);
+let fourth = new node(14);
+let fifth = new node(15);
+let six = new node(16);
+
+
+head.next = second;
+second.next = third;
+third.next = fourth;
+fourth.next = fifth;
+fifth.next = six;
+
+head.printData();
+
+
+
+</script>

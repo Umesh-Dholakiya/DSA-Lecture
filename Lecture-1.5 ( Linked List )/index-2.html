@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add,View,Edit & Delete element</title>
+</head>
+
+<body>
+    <script>
+        class Node {
+            constructor(val) {
+                this.data = val;
+                this.next = null
+            }
+        }
+
+        class LinkedList {
+
+            constructor() {
+                this.head = null
+            }
+
+            addList(data) {
+                const newNode = new Node(data)
+
+                if (!this.head) {
+                    this.head = newNode
+                    return;
+                }
+
+                let current = this.head;
+                while (current.next) {
+                    current = current.next
+                }
+                current.next = newNode;
+            }
+
+            print() {
+                let current = this.head;
+                while (current) {
+                    console.log(current.data);
+                    current = current.next
+                }
+
+            }
+            deleteRecord(index) {
+                let current = this.head;
+
+                for (let i = 0; i < index - 1; i++) {
+                    current = current.next;
+                }
+                current.next = current.next.next
+            }
+
+            updateRecord(index, newNode) {
+                let current = this.head;
+                let count = 0;
+
+                while (count < index) {
+                    current = current.next
+                    count++;
+                }
+                current.data = newNode;
+            }
+
+        }
+
+        const linkedlist = new LinkedList();
+        linkedlist.addList("The way to get started is to quit talking and begin doing. -Walt Disney");
+        linkedlist.addList("You must be the change you wish to see in the world. -Mahatma Gandhi");
+        linkedlist.addList("The only thing we have to fear is fear itself. -Franklin D. Roosevelt");
+        linkedlist.addList("Do one thing every day that scares you. -Eleanor Roosevelt");
+        linkedlist.addList("Well done is better than well said. -Benjamin Franklin");
+        linkedlist.addList("“Be yourself; everyone else is already taken.” – Oscar Wilde");
+        linkedlist.addList("“The purpose of our lives is to be happy.” – Dalai Lama");
+
+        linkedlist.print();
+
+        console.log("Delete Node :- ");
+        linkedlist.deleteRecord(3);
+        linkedlist.print();
+
+        console.log("Update Node :- ");
+        linkedlist.updateRecord(4, "“You only live once, but if you do it right, once is enough.” – Mae West");
+        linkedlist.print();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add,view,edit & delete element</title>
+</head>
+
+<body>
+    <script>
+        class Node {
+            constructor(val) {
+                this.data = val;
+                this.next = null
+            }
+        }
+
+        class LinkedList {
+
+            constructor() {
+                this.head = null
+            }
+
+            addList(data) {
+                const newNode = new Node(data)
+
+                if (!this.head) {
+                    this.head = newNode
+                    return;
+                }
+
+                let current = this.head;
+                while (current.next) {
+                    current = current.next
+                }
+                current.next = newNode;
+            }
+
+            print() {
+                let current = this.head;
+                while (current) {
+                    console.log(current.data);
+                    current = current.next
+                }
+
+            }
+
+        }
+
+        const linkedlist = new LinkedList();
+        linkedlist.addList(11)
+        linkedlist.addList(12)
+        linkedlist.addList(13)
+        linkedlist.addList(14)
+        linkedlist.addList(15)
+        linkedlist.addList(16)
+        linkedlist.addList(17)
+        linkedlist.addList(18)
+        linkedlist.addList(19)
+        linkedlist.addList(20)
+
+        linkedlist.print()
+
+    </script>
+</body>
+
+</html>
