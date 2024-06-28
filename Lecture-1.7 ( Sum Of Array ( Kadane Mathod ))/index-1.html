@@ -1,0 +1,33 @@
+<script>
+
+    // Sum Of Index Method In Two array 
+
+
+    let arr1 = [11, 13, 15, 17, 19, 15, 23, 56, 76 ];
+    let arr2 = [1, 2, 3, 4, 5, 6, 7];
+    let sum = [];
+    let index = 0;
+
+    let i = 0, j = 0;
+    while (i < arr1.length && j < arr2.length) {
+        sum[index] = arr1[i] + arr2[j];
+        i++;
+        j++;
+        index++;
+    }
+
+    while (i < arr1.length) {
+        sum[index] = arr1[i];
+        i++;
+        index++;
+    }
+    while (j < arr2.length) {
+        sum[index] = arr2[j];
+        j++;
+        index++;
+    }
+
+
+    console.log(sum);
+
+</script>

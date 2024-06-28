@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+    let end = prompt('Enter ending point');
+    let arr = [];
+
+    function demo(num, endpoint) {
+        if (num <= endpoint) {
+            arr.push(num);
+            let newNumber = num + 1;
+            demo(newNumber, endpoint);
+        }
+    }
+
+    demo(1, end);
+    console.log(arr);
+
+</script>

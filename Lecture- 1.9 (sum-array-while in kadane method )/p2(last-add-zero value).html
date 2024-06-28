@@ -1,0 +1,28 @@
+<script tyoe="text/javascript">
+
+    let arr = [2, 0, 5, 0, 11, 0, 8, 15];
+    let start = 0;
+    let end = arr.length;
+
+    let ans = [];
+    let zerocount = 0;
+
+    while (start < end) {
+        if (arr[start] != 0) {
+
+            ans.push(arr[start]);
+        }
+        else{
+            zerocount++;
+        }
+        start++;
+    }
+    while(zerocount > 0){
+        ans.push(0);
+        zerocount--;
+    }
+
+    console.log(ans);
+
+
+</script>
