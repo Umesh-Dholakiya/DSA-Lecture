@@ -1,14 +1,13 @@
 <script type="text/javascript">
-
-    // print N Using while Loop 
-    document.write("Print N Using For Loop");
+   
+    document.write("Print U Using For Loop");
     document.write("<br>");
     document.write("<br>");
 
 
     for (let i = 1; i <= 5; i++) {
         for (let j = 1; j <= 5; j++) {
-            if ((i == 2 && j != 3 && j != 4) || (i == 3 && j != 2 && j != 4) || (i == 4 && j != 2 && j != 3) || j == 1 || j == 5) {
+            if ( (i == 5 && j != 1 && j != 5 ) || (j == 1 && i != 5) || (j == 5 && i != 5)) {
                 document.write("*  ");
             }
             else {
@@ -25,7 +24,7 @@
 
 <script type="text/javascript">
 
-    document.write("Print N Using while Loop");
+    document.write("Print U Using while Loop");
     document.write("<br>");
     document.write("<br>");
 
@@ -35,7 +34,7 @@
     while (i <= 5) {
         let j = 1;
         while (j <= 5) {
-            if ((i == 2 && j != 3 && j != 4) || (i == 3 && j != 2 && j != 4) || (i == 4 && j != 2 && j != 3) || j == 1 || j == 5) {
+            if ( (i == 5 && j != 1 && j != 5 ) || (j == 1 && i != 5) || (j == 5 && i != 5)) {
                 document.write("*  ");
             }
             else {

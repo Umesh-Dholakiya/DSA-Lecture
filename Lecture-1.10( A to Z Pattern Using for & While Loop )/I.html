@@ -1,15 +1,14 @@
 <script type="text/javascript">
 
-    // print E Using while Loop 
-
-    document.write("Print E Using For Loop");
+    
+    document.write("Print I Using For Loop");
     document.write("<br>");
     document.write("<br>");
 
 
     for (let i = 1; i <= 5; i++) {
         for (let j = 1; j <= 5; j++) {
-            if ((i == 1 && j <= 4) || j == 1 || (i == 5 && j <= 4) || (i == 3 && j <= 4)) {
+            if (i == 1 || j == 3 || i == 5) {
                 document.write("*  ");
             }
             else {
@@ -26,7 +25,7 @@
 
 <script type="text/javascript">
 
-    document.write("Print E Using while Loop");
+    document.write("Print I Using while Loop");
     document.write("<br>");
     document.write("<br>");
 
@@ -36,7 +35,7 @@
     while (i <= 5) {
         let j = 1;
         while (j <= 5) {
-            if ((i == 1 && j <= 4) || j == 1 || (i == 5 && j <= 4) || (i == 3 && j <= 4)){
+            if (i == 1 || j == 3 || i == 5) {
                 document.write("*  ");
             }
             else {
