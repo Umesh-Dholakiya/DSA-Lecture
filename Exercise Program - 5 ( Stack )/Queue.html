@@ -1,0 +1,74 @@
+<script type="text/javascript">
+
+    class Queue {
+        constructor() {
+            this.items = [];
+        }
+
+        // Push an element onto the stack
+        enqueue(element) {
+            this.items.push(element);
+        }
+
+        // Pop an element from the stack
+        dequeue() {
+            if (this.Empty()) {
+                return "Stack is empty";
+            }
+            return this.items.shift();
+        }
+
+        // Front at the top element of the stack
+        front(){
+            return this.items[0]
+        }
+
+        // Check if the stack is empty
+        Empty() {
+            return this.items.length === 0;
+        }
+
+        // Get the size of the stack
+        size() {
+            return this.items.length;
+        }
+
+        // Print the stack elements
+        printStack() {
+            for(let i = 0; i < this.items.length; i++){
+                console.log(this.items[i]);
+            }
+        }
+    }
+
+    
+    let queue = new Queue();
+
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.enqueue(40);
+    queue.enqueue(50);
+    queue.enqueue(60);
+    queue.enqueue(70);
+    queue.enqueue(80);
+    queue.enqueue(90);
+    queue.enqueue(100);
+
+    console.log("Remove First Element :- ");
+    console.log(queue.dequeue()); 
+    
+    console.log("Show the First Element :- ");
+    console.log(queue.front());   
+
+    console.log("Check if the queue is Empty");
+    console.log(queue.Empty()); 
+
+    console.log("Show the Size of the queue :- ");
+    console.log(queue.size()); 
+
+    console.log("Print the queue :- ");
+    queue.printStack();
+
+
+</script>

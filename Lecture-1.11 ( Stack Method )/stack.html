@@ -1,0 +1,57 @@
+<script type="text/javascript">
+
+    class Stack {
+        constructor() {
+            this.items = [];
+        }
+
+        push(element) {
+            this.items.push(element);
+        }
+
+        isEmpty(element) {
+            return this.items.length === 0;
+        }
+
+        pop(element) {
+            if (this.isEmpty()) {
+                return "Stack is Empty";
+            }
+            return this.items.pop(element);
+        }
+
+        peek() {
+            if (this.isEmpty()) {
+                return "stack is Empty";
+            }
+            return this.items[this.items.length - 1];
+        }
+
+        size() {
+            return this.items.length;
+        }
+
+        Printstack() {
+            console.log(this.items.join());
+        }
+    }
+
+
+    let stack = new Stack();
+
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    stack.push(40);
+    stack.push(50);
+
+    
+    console.log(stack.isEmpty());
+    console.log(stack.pop());
+    console.log(stack.peek());
+    console.log(stack.size());
+
+    stack.Printstack();
+
+
+</script>

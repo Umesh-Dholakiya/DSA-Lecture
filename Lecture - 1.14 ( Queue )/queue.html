@@ -1,0 +1,68 @@
+<script type="text/javascript">
+
+    class Queue{
+        constructor(){
+            this.items = [];
+        }
+
+        enqueue(value){
+            this.items.push(value);
+        }
+
+        dequeue(){
+            if(this.Empty()){
+                console.log();
+            }
+            return this.items.shift();
+        }
+        front(){
+            return this.items[0];
+        }
+
+        Empty(){
+            return this.items.length === 0;
+        }
+        size(){
+            return this.items.length;
+        }
+
+        printstack(){
+            for(let i = 0; i < this.items.length; i++){
+                console.log(this.items[i]);
+            }
+
+        }
+    }
+
+    var queue = new Queue();
+
+
+    // console.log("Push All Element in queue :-");
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.enqueue(40);
+    queue.enqueue(50);
+
+
+    console.log("All Print Element :-");
+    queue.printstack();
+
+    console.log("First Remove Element :-");
+    console.log(queue.dequeue());
+
+    console.log("Check The Value :-");
+    console.log(queue.Empty());
+
+    console.log("Check Element Size:-");
+    console.log(queue.size());
+
+    console.log("Write First Element   :-");
+    console.log(queue.front());
+
+
+    console.log("All Print Element :-");
+    queue.printstack();
+
+
+</script>
